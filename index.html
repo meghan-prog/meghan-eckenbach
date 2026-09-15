@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meghan Eckenbach helpt ondernemers en professionals met business growth, AI & automation en persoonlijke Virtual Assistant support.">
+    <title>Meghan Eckenbach | Business Growth, Automation & Virtual Assistant</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+        :root {
+            --cream: #f5f1eb;
+            --cream-light: #faf8f5;
+            --taupe: #d8cec1;
+            --brown: #3d352e;
+            --brown-light: #6d6258;
+            --black: #24211e;
+            --white: #ffffff;
+            --border: rgba(61, 53, 46, 0.14);
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--brown);
+            background: var(--cream);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+            padding: 28px 0;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.55;
+        }
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .language-switch button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: 12px;
+            color: var(--brown-light);
+            padding: 0;
+        }
+
+        .language-switch button.active {
+            color: var(--brown);
+            font-weight: 600;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border: 1px solid var(--brown);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-dark {
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: transparent;
+            color: var(--brown);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--brown);
+        }
+
+        .btn-outline:hover {
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            padding: 130px 0 80px;
+            background: var(--cream);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.17em;
+            color: var(--brown-light);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(54px, 6.4vw, 88px);
+            line-height: 0.98;
+            font-weight: 400;
+            letter-spacing: -3px;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--brown-light);
+            max-width: 560px;
+            margin-bottom: 38px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrap {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 0.82;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-image-note {
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+            background: var(--white);
+            padding: 19px 22px;
+            max-width: 220px;
+            font-family: var(--serif);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 125px 0;
+            background: var(--cream-light);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 100px;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--brown-light);
+        }
+
+        .intro h2,
+        .section-heading h2 {
+            font-family: var(--serif);
+            font-size: clamp(42px, 5vw, 66px);
+            line-height: 1.05;
+            font-weight: 400;
+            letter-spacing: -2px;
+        }
+
+        .intro-content p {
+            font-size: 20px;
+            line-height: 1.65;
+            color: var(--brown-light);
+            max-width: 720px;
+        }
+
+        .intro-content p + p {
+            margin-top: 25px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 125px 0;
+            background: var(--cream);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: 100px;
+            margin-bottom: 70px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--border);
+        }
+
+        .service-card {
+            padding: 42px 38px 45px;
+            min-height: 390px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:first-child {
+            border-left: 1px solid var(--border);
+        }
+
+        .service-number {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--brown-light);
+            margin-bottom: 45px;
+        }
+
+        .service-card h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .service-lead {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--brown-light);
+            margin-bottom: 28px;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: auto;
+        }
+
+        .service-list li {
+            font-size: 13px;
+            padding: 7px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        /* =========================
+           PROBLEM / QUOTE SECTION
+        ========================= */
+
+        .problem {
+            padding: 140px 0;
+            background: var(--brown);
+            color: var(--cream);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 100px;
+        }
+
+        .problem .eyebrow {
+            color: rgba(245, 241, 235, 0.55);
+        }
+
+        .problem h2 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(50px, 6vw, 82px);
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 40px;
+        }
+
+        .problem-copy {
+            max-width: 650px;
+        }
+
+        .problem-copy .lead {
+            font-family: var(--serif);
+            font-size: 29px;
+            line-height: 1.3;
+            margin-bottom: 28px;
+        }
+
+        .problem-copy p {
+            color: rgba(245, 241, 235, 0.72);
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .problem-statement {
+            border-top: 1px solid rgba(245, 241, 235, 0.2);
+            margin-top: 55px;
+            padding-top: 28px;
+            font-family: var(--serif);
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            padding: 135px 0;
+            background: var(--cream-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .about-image-wrap {
+            position: relative;
+            max-width: 460px;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 0.82;
+            object-fit: cover;
+        }
+
+        .about-image-wrap::after {
+            content: "";
+            position: absolute;
+            left: 22px;
+            bottom: -22px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--border);
+            z-index: 0;
+        }
+
+        .about-image {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-family: var(--serif);
+            font-size: clamp(42px, 5vw, 65px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 35px;
+        }
+
+        .about-content p {
+            color: var(--brown-light);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 650px;
+            margin-bottom: 20px;
+        }
+
+        .about-quote {
+            border-left: 1px solid var(--brown);
+            padding-left: 24px;
+            font-family: var(--serif);
+            font-size: 25px;
+            line-height: 1.35;
+            margin: 35px 0;
+        }
+
+        .languages {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+        }
+
+        .languages-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--brown-light);
+            margin-bottom: 15px;
+        }
+
+        .language-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .language-item {
+            font-size: 13px;
+        }
+
+        .language-item strong {
+            font-weight: 600;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            padding: 130px 0;
+            background: var(--cream);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: 100px;
+        }
+
+        .process-items {
+            border-top: 1px solid var(--border);
+        }
+
+        .process-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-item span {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            color: var(--brown-light);
+            padding-top: 5px;
+        }
+
+        .process-item h3 {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .process-item p {
+            color: var(--brown-light);
+            font-size: 15px;
+            max-width: 600px;
+        }
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials {
+            padding: 130px 0;
+            background: var(--taupe);
+        }
+
+        .testimonial-inner {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-family: var(--serif);
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.3;
+            margin-bottom: 35px;
+        }
+
+        .testimonial-name {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--brown-light);
+            margin-top: 5px;
+        }
+
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .testimonial-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            border: 1px solid var(--brown);
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .testimonial-dot.active {
+            background: var(--brown);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .final-cta {
+            padding: 145px 0;
+            background: var(--cream-light);
+        }
+
+        .final-cta-inner {
+            max-width: 850px;
+        }
+
+        .final-cta h2 {
+            font-family: var(--serif);
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            color: var(--brown-light);
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 38px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--brown);
+            color: var(--cream);
+            padding: 45px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-family: var(--serif);
+            font-size: 22px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            font-size: 12px;
+            color: rgba(245, 241, 235, 0.7);
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: rgba(245, 241, 235, 0.5);
+        }
+
+        /* =========================
+           LANGUAGE VISIBILITY
+        ========================= */
+
+        [data-lang] {
+            display: none;
+        }
+
+        body.lang-nl [data-lang="nl"] {
+            display: block;
+        }
+
+        body.lang-en [data-lang="en"] {
+            display: block;
+        }
+
+        /* Inline language elements */
+        span[data-lang] {
+            display: none;
+        }
+
+        body.lang-nl span[data-lang="nl"] {
+            display: inline;
+        }
+
+        body.lang-en span[data-lang="en"] {
+            display: inline;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .container {
+                width: min(100% - 42px, 700px);
+            }
+
+            header {
+                padding: 22px 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-right {
+                gap: 18px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 120px 0 80px;
+            }
+
+            .hero-grid,
+            .intro-grid,
+            .section-heading,
+            .problem-grid,
+            .about-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 14vw, 70px);
+                letter-spacing: -2px;
+            }
+
+            .hero-text {
+                font-size: 17px;
+            }
+
+            .hero-image-wrap {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
+                border-left: 1px solid var(--border);
+            }
+
+            .service-card:first-child {
+                border-left: 1px solid var(--border);
+            }
+
+            .about-image-wrap {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .problem h2 {
+                font-size: clamp(48px, 14vw, 72px);
+            }
+
+            .final-cta h2 {
+                font-size: clamp(48px, 13vw, 70px);
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 32px);
+            }
+
+            .hero {
+                padding-top: 105px;
+            }
+
+            .hero-image-note {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                margin-top: -1px;
+                max-width: none;
+            }
+
+            .intro,
+            .services,
+            .problem,
+            .about,
+            .process,
+            .testimonials,
+            .final-cta {
+                padding: 90px 0;
+            }
+
+            .section-heading,
+            .intro-grid,
+            .problem-grid,
+            .about-grid,
+            .process-grid {
+                gap: 40px;
+            }
+
+            .service-card {
+                padding: 32px 26px;
+            }
+
+            .process-item {
+                grid-template-columns: 65px 1fr;
+                gap: 18px;
+            }
+
+            .language-items {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body class="lang-nl">
+
+<header>
+    <div class="container">
+        <nav class="nav">
+
+            <a href="#top" class="logo">
+                Meghan Eckenbach
+            </a>
+
+            <div class="nav-right">
+
+                <div class="nav-links">
+                    <a href="#services">
+                        <span data-lang="nl">Diensten</span>
+                        <span data-lang="en">Services</span>
+                    </a>
+
+                    <a href="#about">
+                        <span data-lang="nl">Over mij</span>
+                        <span data-lang="en">About</span>
+                    </a>
+
+                    <a href="#contact">
+                        <span data-lang="nl">Contact</span>
+                        <span data-lang="en">Contact</span>
+                    </a>
+                </div>
+
+                <div class="language-switch">
+                    <button class="active" data-language="nl">NL</button>
+                    <span>/</span>
+                    <button data-language="en">EN</button>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<main id="top">
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+                <div class="hero-content">
+
+                    <div data-lang="nl">
+
+                        <div class="eyebrow">
+                            Business Growth · Automation · Virtual Assistant
+                        </div>
+
+                        <h1>
+                            Jouw business.<br>
+                            <em>Beter geregeld.</em>
+                        </h1>
+
+                        <p class="hero-text">
+                            Ik help ondernemers en professionals groeien, slimmer werken en werk uit handen nemen, met een combinatie van business growth, AI & automation en persoonlijke VA-support.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn btn-dark" href="https://wa.me/34648438342" target="_blank">
+                                Plan een kennismaking
+                            </a>
+
+                            <a class="btn btn-outline" href="#services">
+                                Bekijk mijn diensten
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <div class="eyebrow">
+                            Business Growth · Automation · Virtual Assistant
+                        </div>
+
+                        <h1>
+                            Your business.<br>
+                            <em>Better organised.</em>
+                        </h1>
+
+                        <p class="hero-text">
+                            I help entrepreneurs and professionals grow, work smarter and get things off their plate through a combination of business growth, AI & automation and personal VA support.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn btn-dark" href="https://wa.me/34648438342" target="_blank">
+                                Book an introduction call
+                            </a>
+
+                            <a class="btn btn-outline" href="#services">
+                                Explore my services
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image-wrap">
+
+                    <!-- PLAATS HIER DE HERO FOTO -->
+                    <!-- Vervang src door jouw eigen hero afbeelding -->
+                    <img
+                        class="hero-image"
+                        src="hero-photo.jpg"
+                        alt="Meghan Eckenbach"
+                    >
+
+                    <div class="hero-image-note">
+                        <span data-lang="nl">
+                            Van vraagstuk naar uitvoering.
+                        </span>
+
+                        <span data-lang="en">
+                            From question to execution.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+                    <div class="section-number">01</div>
+                </div>
+
+                <div class="intro-content">
+
+                    <div data-lang="nl">
+
+                        <h2>
+                            Niet nog iemand die je moet aansturen.
+                        </h2>
+
+                        <br><br>
+
+                        <p>
+                            Soms heb je vooral iemand nodig die begrijpt wat je bedoelt, uitzoekt wat nodig is en het vervolgens gewoon oppakt.
+                        </p>
+
+                        <p>
+                            Van een nieuw idee tot een online project, van automatisering tot praktische ondersteuning. Ik denk mee, zoek uit en voer uit.
+                        </p>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <h2>
+                            Not another person you have to manage.
+                        </h2>
+
+                        <br><br>
+
+                        <p>
+                            Sometimes you simply need someone who understands what you mean, figures out what is needed and takes it from there.
+                        </p>
+
+                        <p>
+                            From a new idea to an online project, from automation to practical support. I think, figure things out and execute.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-number">02</div>
+                </div>
+
+                <div data-lang="nl">
+                    <div class="eyebrow">Wat ik doe</div>
+
+                    <h2>
+                        Van vraagstuk naar iets dat staat.
+                    </h2>
+                </div>
+
+                <div data-lang="en">
+                    <div class="eyebrow">What I do</div>
+
+                    <h2>
+                        From a question to something that works.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <!-- SERVICE 1 -->
+
+                <article class="service-card">
+
+                    <div class="service-number">01 / BUSINESS</div>
+
+                    <div data-lang="nl">
+
+                        <h3>Business & Growth</h3>
+
+                        <p class="service-lead">
+                            Van vraagstuk naar concrete volgende stap.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Business- en groeivraagstukken</li>
+                            <li>Nieuwe ideeën en projecten</li>
+                            <li>Offer & positioning</li>
+                            <li>Markt- en concurrentieonderzoek</li>
+                            <li>Customer journey & processen</li>
+                            <li>Online business vraagstukken</li>
+                            <li>Praktische strategie en advies</li>
+                            <li>Projecten van idee tot uitvoering</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <h3>Business & Growth</h3>
+
+                        <p class="service-lead">
+                            From a business question to a concrete next step.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Business and growth questions</li>
+                            <li>New ideas and projects</li>
+                            <li>Offer & positioning</li>
+                            <li>Market and competitor research</li>
+                            <li>Customer journeys & processes</li>
+                            <li>Online business questions</li>
+                            <li>Practical strategy and advice</li>
+                            <li>Projects from idea to execution</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 2 -->
+
+                <article class="service-card">
+
+                    <div class="service-number">02 / TECHNOLOGY</div>
+
+                    <div data-lang="nl">
+
+                        <h3>Online, Tech & Automation</h3>
+
+                        <p class="service-lead">
+                            Je hoeft niet technisch te zijn om online slimmer te werken.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Websites & online tools</li>
+                            <li>AI</li>
+                            <li>Automations & workflows</li>
+                            <li>Systemen & CRM</li>
+                            <li>Integraties</li>
+                            <li>E-mail & funnels</li>
+                            <li>Online processen</li>
+                            <li>Implementatie & optimalisatie</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <h3>Online, Tech & Automation</h3>
+
+                        <p class="service-lead">
+                            You don't have to be technical to work smarter online.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Websites & online tools</li>
+                            <li>AI</li>
+                            <li>Automations & workflows</li>
+                            <li>Systems & CRM</li>
+                            <li>Integrations</li>
+                            <li>Email & funnels</li>
+                            <li>Online processes</li>
+                            <li>Implementation & optimisation</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE 3 -->
+
+                <article class="service-card">
+
+                    <div class="service-number">03 / SUPPORT</div>
+
+                    <div data-lang="nl">
+
+                        <h3>VA & Business Support</h3>
+
+                        <p class="service-lead">
+                            Soms hoeft iets niet slimmer. Het moet gewoon gebeuren.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Online research</li>
+                            <li>Project support</li>
+                            <li>Website management</li>
+                            <li>Administratie</li>
+                            <li>Communicatie & opvolging</li>
+                            <li>Planning & organisatie</li>
+                            <li>Content & online taken</li>
+                            <li>Ad-hoc business support</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <h3>VA & Business Support</h3>
+
+                        <p class="service-lead">
+                            Sometimes it doesn't need to be smarter. It simply needs to get done.
+                        </p>
+
+                        <ul class="service-list">
+                            <li>Online research</li>
+                            <li>Project support</li>
+                            <li>Website management</li>
+                            <li>Administration</li>
+                            <li>Communication & follow-up</li>
+                            <li>Planning & organisation</li>
+                            <li>Content & online tasks</li>
+                            <li>Ad-hoc business support</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROBLEM
+    ========================== -->
+
+    <section class="problem">
+
+        <div class="container">
+
+            <div class="problem-grid">
+
+                <div>
+                    <div data-lang="nl">
+                        <div class="eyebrow">Je hoeft het niet eerst zelf uit te zoeken</div>
+                    </div>
+
+                    <div data-lang="en">
+                        <div class="eyebrow">You don't have to figure it all out first</div>
+                    </div>
+                </div>
+
+
+                <div class="problem-copy">
+
+                    <div data-lang="nl">
+
+                        <h2>
+                            "Kun jij hier even naar kijken?"
+                        </h2>
+
+                        <p class="lead">
+                            Dat is vaak al genoeg.
+                        </p>
+
+                        <p>
+                            Misschien weet je precies wat er moet gebeuren. Misschien heb je alleen een idee, een probleem of iets dat al weken blijft liggen.
+                        </p>
+
+                        <p>
+                            Leg het bij mij neer. Ik kijk wat er speelt, zoek uit wat nodig is en help je het voor elkaar te krijgen.
+                        </p>
+
+                        <div class="problem-statement">
+                            Meedenken. Slimmer maken. Uitvoeren.
+                        </div>
+
+                        <p style="margin-top: 25px;">
+                            Dat is de combinatie die ik meebreng. Ik kijk niet alleen naar de taak, maar naar het doel erachter, en vervolgens naar de slimste manier om daar te komen.
+                        </p>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <h2>
+                            "Can you take a look at this?"
+                        </h2>
+
+                        <p class="lead">
+                            Often, that's all you need to say.
+                        </p>
+
+                        <p>
+                            Maybe you know exactly what needs to happen. Maybe you simply have an idea, a problem or something that has been sitting on your list for weeks.
+                        </p>
+
+                        <p>
+                            Put it on my desk. I'll look at what's going on, figure out what is needed and help get it done.
+                        </p>
+
+                        <div class="problem-statement">
+                            Think. Simplify. Execute.
+                        </div>
+
+                        <p style="margin-top: 25px;">
+                            That's the combination I bring. I don't just look at the task, but at the goal behind it, and then at the smartest way to get there.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image-wrap">
+
+                    <!-- PLAATS HIER DE ABOUT FOTO -->
+                    <!-- Vervang src door jouw eigen foto -->
+                    <img
+                        class="about-image"
+                        src="about-photo.jpg"
+                        alt="Meghan Eckenbach working"
+                    >
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <div data-lang="nl">
+
+                        <div class="eyebrow">
+                            Over mij
+                        </div>
+
+                        <h2>
+                            Een extra paar handen.<br>
+                            Met ondernemersinzicht.
+                        </h2>
+
+                        <p>
+                            Als ondernemer heb je niet altijd iemand nodig die je vertelt wat je moet doen. Soms heb je vooral iemand nodig die <strong>meedenkt, uitzoekt en het vervolgens oppakt.</strong>
+                        </p>
+
+                        <p>
+                            Zelf heb ik jarenlang aan het roer gestaan van een SaaS-agency en werkte ik als <strong>Microsoft consultant</strong> op het gebied van technologie, marketing en business automation.
+                        </p>
+
+                        <p>
+                            Mijn carrière begon als <strong>Virtual Assistant</strong>. Daardoor kan ik schakelen tussen het grotere plaatje en de uitvoering. Ik begrijp wat er nodig is, zoek uit hoe het kan en zorg dat het gebeurt.
+                        </p>
+
+                        <div class="about-quote">
+                            Van idee en vraagstuk naar iets dat daadwerkelijk staat.
+                        </div>
+
+                        <div class="languages">
+
+                            <div class="languages-title">
+                                Talen
+                            </div>
+
+                            <div class="language-items">
+
+                                <div class="language-item">
+                                    <strong>Nederlands</strong> · Fluent
+                                </div>
+
+                                <div class="language-item">
+                                    <strong>English</strong> · Fluent
+                                </div>
+
+                                <div class="language-item">
+                                    <strong>Español</strong> · B1
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div data-lang="en">
+
+                        <div class="eyebrow">
+                            About me
+                        </div>
+
+                        <h2>
+                            An extra pair of hands.<br>
+                            With business insight.
+                        </h2>
+
+                        <p>
+                            As an entrepreneur, you don't always need someone to tell you what to do. Sometimes you simply need someone who can <strong>think along, figure things out and take it from there.</strong>
+                        </p>
+
+                        <p>
+                            I spent years running a SaaS agency and later worked as a <strong>Microsoft consultant</strong> specialising in technology, marketing and business automation.
+                        </p>
+
+                        <p>
+                            I started my career as a <strong>Virtual Assistant</strong>. That allows me to move easily between the bigger picture and execution. I understand what needs to happen, figure out how to make it work and get it done.
+                        </p>
+
+                        <div class="about-quote">
+                            From an idea or question to something that actually exists.
+                        </div>
+
+                        <div class="languages">
+
+                            <div class="languages-title">
+                                Languages
+                            </div>
+
+                            <div class="language-items">
+
+                                <div class="language-item">
+                                    <strong>Dutch</strong> · Fluent
+                                </div>
+
+                                <div class="language-item">
+                                    <strong>English</strong> · Fluent
+                                </div>
+
+                                <div class="language-item">
+                                    <strong>Spanish</strong> · B1
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================== -->
+
+    <section class="process">
+
+        <div class="container">
+
+            <div class="process-grid">
+
+                <div>
+
+                    <div class="section-number">
+                        04
+                    </div>
+
+                    <div data-lang="nl">
+                        <div class="eyebrow" style="margin-top:25px;">
+                            Zo werk ik
+                        </div>
+
+                        <h2>
+                            Van idee naar uitvoering.
+                        </h2>
+                    </div>
+
+                    <div data-lang="en">
+                        <div class="eyebrow" style="margin-top:25px;">
+                            How I work
+                        </div>
+
+                        <h2>
+                            From idea to execution.
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="process-items">
+
+                    <div class="process-item">
+
+                        <span>01</span>
+
+                        <div data-lang="nl">
+                            <h3>Vertel</h3>
+                            <p>
+                                Vertel me wat je wilt bereiken, waar je tegenaan loopt of wat er op je lijst blijft staan.
+                            </p>
+                        </div>
+
+                        <div data-lang="en">
+                            <h3>Tell me</h3>
+                            <p>
+                                Tell me what you want to achieve, what you're stuck on or what keeps sitting on your list.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>02</span>
+
+                        <div data-lang="nl">
+                            <h3>Analyse</h3>
+                            <p>
+                                Ik kijk naar het vraagstuk, de context en wat er nodig is om verder te komen.
+                            </p>
+                        </div>
+
+                        <div data-lang="en">
+                            <h3>Analyse</h3>
+                            <p>
+                                I look at the question, the context and what is needed to move forward.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>03</span>
+
+                        <div data-lang="nl">
+                            <h3>Oplossen</h3>
+                            <p>
+                                Ik zoek uit wat de beste aanpak is, welke tools nodig zijn en waar kansen liggen om slimmer te werken.
+                            </p>
+                        </div>
+
+                        <div data-lang="en">
+                            <h3>Solve</h3>
+                            <p>
+                                I figure out the best approach, the tools needed and where there are opportunities to work smarter.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>04</span>
+
+                        <div data-lang="nl">
+                            <h3>Uitvoeren</h3>
+                            <p>
+                                Vervolgens pak ik het op. Zelfstandig waar mogelijk, samen waar nodig.
+                            </p>
+                        </div>
+
+                        <div data-lang="en">
+                            <h3>Execute</h3>
+                            <p>
+                                Then I take it from there. Independently where possible, together where needed.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TESTIMONIALS
+    ========================== -->
+
+    <section class="testimonials">
+
+        <div class="container">
+
+            <div class="testimonial-inner">
+
+                <div class="eyebrow">
+                    What clients say
+                </div>
+
+                <div class="testimonial-slide">
+
+                    <div class="testimonial-quote">
+                        "Meghan combines strategic thinking with actually getting things done."
+                    </div>
+
+                    <div class="testimonial-name">
+                        Ricardo Soto
+                    </div>
+
+                    <div class="testimonial-role">
+                        Secured by Design
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial-controls">
+
+                    <button class="testimonial-dot active" data-slide="0"></button>
+                    <button class="testimonial-dot" data-slide="1"></button>
+                    <button class="testimonial-dot" data-slide="2"></button>
+                    <button class="testimonial-dot" data-slide="3"></button>
+                    <button class="testimonial-dot" data-slide="4"></button>
+                    <button class="testimonial-dot" data-slide="5"></button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="final-cta" id="contact">
+
+        <div class="container">
+
+            <div class="final-cta-inner">
+
+                <div data-lang="nl">
+
+                    <div class="eyebrow">
+                        Even kennismaken?
+                    </div>
+
+                    <h2>
+                        Heb je iets waar je al een tijdje mee loopt?
+                    </h2>
+
+                    <p>
+                        Vertel me wat er speelt. We kijken samen wat er nodig is en of ik de juiste persoon ben om het op te pakken.
+                    </p>
+
+                    <a class="btn btn-dark" href="https://wa.me/34648438342" target="_blank">
+                        Plan een kennismaking
+                    </a>
+
+                </div>
+
+
+                <div data-lang="en">
+
+                    <div class="eyebrow">
+                        Let's talk?
+                    </div>
+
+                    <h2>
+                        Is there something you've been meaning to tackle?
+                    </h2>
+
+                    <p>
+                        Tell me what's going on. We'll look at what is needed and whether I'm the right person to take it from there.
+                    </p>
+
+                    <a class="btn btn-dark" href="https://wa.me/34648438342" target="_blank">
+                        Book an introduction call
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-logo">
+                Meghan Eckenbach
+            </div>
+
+            <div class="footer-links">
+
+                <a href="https://wa.me/34648438342" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="#services">
+                    <span data-lang="nl">Diensten</span>
+                    <span data-lang="en">Services</span>
+                </a>
+
+                <a href="#about">
+                    <span data-lang="nl">Over mij</span>
+                    <span data-lang="en">About</span>
+                </a>
+
+            </div>
+
+            <div class="footer-copy">
+                © 2026 Meghan Eckenbach
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    /* =========================
+       LANGUAGE SWITCH
+    ========================== */
+
+    const languageButtons = document.querySelectorAll("[data-language]");
+
+    languageButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const language = button.dataset.language;
+
+            document.body.classList.remove("lang-nl", "lang-en");
+            document.body.classList.add("lang-" + language);
+
+            languageButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+        });
+
+    });
+
+
+    /* =========================
+       TESTIMONIALS
+    ========================== */
+
+    const testimonials = [
+        {
+            quote: "“Meghan combines strategic thinking with actually getting things done.”",
+            name: "Ricardo Soto",
+            role: "Secured by Design"
+        },
+        {
+            quote: "“She sees what needs to happen and doesn't need constant direction.”",
+            name: "Tim van Orsouw",
+            role: "Pijn Reset Methode"
+        },
+        {
+            quote: "“Meghan understands both the technology and the business behind it.”",
+            name: "Eddie Tjon Fo",
+            role: "Sparkwise Institute"
+        },
+        {
+            quote: "“She quickly understands the bigger picture and turns it into action.”",
+            name: "Veronic Sijstermans",
+            role: "Jupos"
+        },
+        {
+            quote: "“From idea to implementation, Meghan knows how to make things happen.”",
+            name: "David Symanzig",
+            role: "Antistralingshop.nl"
+        },
+        {
+            quote: "“A rare combination of strategic thinking, technology and execution.”",
+            name: "Joost van Deursen",
+            role: "Curiosity Change Drives"
+        }
+    ];
+
+    const quoteElement = document.querySelector(".testimonial-quote");
+    const nameElement = document.querySelector(".testimonial-name");
+    const roleElement = document.querySelector(".testimonial-role");
+    const dots = document.querySelectorAll(".testimonial-dot");
+
+    function showTestimonial(index) {
+
+        const testimonial = testimonials[index];
+
+        quoteElement.textContent = testimonial.quote;
+        nameElement.textContent = testimonial.name;
+        roleElement.textContent = testimonial.role;
+
+        dots.forEach(dot => {
+            dot.classList.remove("active");
+        });
+
+        dots[index].classList.add("active");
+    }
+
+    dots.forEach(dot => {
+
+        dot.addEventListener("click", () => {
+
+            const index = parseInt(dot.dataset.slide);
+
+            showTestimonial(index);
+
+        });
+
+    });
+
+
+    /* =========================
+       OPTIONAL AUTO ROTATION
+    ========================== */
+
+    let currentSlide = 0;
+
+    setInterval(() => {
+
+        currentSlide++;
+
+        if (currentSlide >= testimonials.length) {
+            currentSlide = 0;
+        }
+
+        showTestimonial(currentSlide);
+
+    }, 7000);
+
+</script>
+
+</body>
+</html>
